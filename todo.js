@@ -28,18 +28,19 @@ window.addEventListener("load", function () {
 });
 
 function createTask() {
-	createTask();
+	task_el.classList.add("task");
 	createTaskContent();
 	createTaskInput();
 	createTaskActions();
 	checkEvent();
-	task_el.classList.add("task");
+	// createTask();
 }
+
 function createTaskContent() {
 	task_content_el.classList.add("content");
-	task_el.appendChild(task_content_el);
 	task_actions_el.appendChild(task_edit_el);
 	task_actions_el.appendChild(task_delete_el);
+	task_el.appendChild(task_content_el);
 }
 
 function createTaskInput() {
